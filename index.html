@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JavaScript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- BAI TAP 1 -->
+    <section>
+        <div class="baitap1">
+            <h1>BÀI TẬP 1</h1>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Quản lí tuyển sinh
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Điểm Chuẩn </label>
+                                    <input id="diemchuan" type="number" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Chọn Khu Vực</label>
+                                    <select class="form-control" id="khuvuc">
+                                        <option value="0">Chọn Khu Vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Chọn đổi tượng</label>
+                                    <select class="form-control" id="doituong">
+                                        <option value="0">Chọn đổi tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Điểm Môn Thứ 1</label>
+                                    <input id="diemmon1" type="number" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Điểm Môn Thứ 2</label>
+                                    <input id="diemmon2" type="number" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Điểm Môn Thứ 3</label>
+                                    <input id="diemmon3" type="number" class="form-control" />
+                                </div>
+                                <button id="btntinhdiem" class="btn btn-success">Tính Điểm</button>
+                            </div>
+                            <div id="Sodiem" class="card-footer text-muted">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BAI TAP 2 -->
+    <hr />
+    <section>
+        <div class="baitap2">
+            <h1>BÀI TẬP 2</h1>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Tính tiền điện
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Nhập Họ Tên</label>
+                                    <input id="hoten" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nhập Số Kw</label>
+                                    <input id="sokw" type="number" class="form-control">
+                                </div>
+                                <button type="button" class="btn btn-success" onclick="btntiendien()">Tính tiền
+                                    điện</button>
+                            </div>
+                            <div id="tiendien" class="card-footer text-muted">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- BAI TAP 3 -->
+    <hr />
+    <section>
+        <div class="baitap3">
+            <h1>BÀI TẬP 3</h1>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Tính thuế thu nhập cá nhân
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Nhập Họ Tên</label>
+                                    <input id="hovaten" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tổng thu nhập năm</label>
+                                    <input id="thunhap" type="number" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Số người phụ thuộc</label>
+                                    <input id="phuthuoc" type="number" class="form-control">
+                                </div>
+                                <button type="button" class="btn btn-success" onclick="btntienthue()">Tính tiền
+                                    thuế</button>
+                            </div>
+                            <div id="tienthue" class="card-footer text-muted">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- BÀI TẬP 4 -->
+    <hr>
+    <section>
+        <div class="baitap4">
+            <h1>BÀI TẬP 4</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Tính tiền cáp
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Chọn loại khách hàng</label>
+                                    <select class="form-control" id="loaikhachhang" onchange="sltLoaiKhachHangChange()">
+                                        <option>Nhà Dân</option>
+                                        <option>Doanh Nghiệp</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mã Khách hàng</label>
+                                    <input id="makhachhang" type="text" class="form-control">
+                                    <label>Số Kênh Cao Cấp</label>
+                                    <input id="sokenh" type="number" class="form-control">
+                                    <label id="lblSoKetNoi" style="display: none;">Số Kết Nối</label>
+                                    <input id="soketnoi" type="number" class="form-control" style="display: none;">
+                                </div>
+                                <button id="btntiencap" class="btn btn-success" onclick="btnTinhTienCap()">Tính tiền
+                                    cáp</button>
+                            </div>
+                        </div>
+                        <div id="tiencap" class="card-footer text-muted">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
